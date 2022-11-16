@@ -1,2 +1,10 @@
 <h1>新增許願卡</h1>
 
+
+
+<%= form_for :new_wish , url: create_wish_path do |f| %>
+  title: <%= f.text_field :first_name %><br />
+  content: <%= f.text_area :last_name %><br />
+  <%= f.submit %>
+
+<% end %>

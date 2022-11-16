@@ -1,0 +1,2 @@
+class NewWish < ApplicationRecord
+end
