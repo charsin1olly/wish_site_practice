@@ -1,5 +1,5 @@
 class WishListsController < ApplicationController
-
+  before_action :find_wish ,only:[:show,:edit,:update,:destroy]
   def index
     @new_wishes=NewWish.all
   end

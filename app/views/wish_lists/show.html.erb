@@ -12,7 +12,7 @@
   <section>
     <span><%= @new_wish.title %></span>
     <article>
-      <%= @new_wish.content %>
+      <%= simple_format(@new_wish.content) %>
     </article>
   </section>
 
