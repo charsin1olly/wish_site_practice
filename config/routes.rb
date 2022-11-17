@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   get '/wish_list' ,to:'wish_list#home'
   get '/new_wish' ,to:'wish_list#new_wish'
   post '/create_wish' ,to: 'wish_list#create_wish'
-  
+  get '/wish_card' , to: 'wish_list#wish_card'
+
 end

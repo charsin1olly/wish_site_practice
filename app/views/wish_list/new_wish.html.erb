@@ -2,9 +2,16 @@
 
 
 
-<%= form_for :new_wish , url: create_wish_path do |f| %>
-  title: <%= f.text_field :first_name %><br />
-  content: <%= f.text_area :last_name %><br />
-  <%= f.submit %>
+<%= form_for @new_wish , url: create_wish_path do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br />
+  </div>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content %><br />
+  </div>
+ 
+  <%= f.submit "許願吧～" %>
 
 <% end %>
