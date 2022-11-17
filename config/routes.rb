@@ -3,5 +3,5 @@ Rails.application.routes.draw do
  
   resources :wish_lists
 
-  root'wish_lists#home'
+  root'wish_lists#index'
 end

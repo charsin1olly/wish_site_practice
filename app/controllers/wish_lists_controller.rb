@@ -1,30 +1,33 @@
 class WishListsController < ApplicationController
 
-  def home
+  def index
     @new_wishes=NewWish.all
   end
 
-  def new_wish
+  def new
     @new_wish = NewWish.new()
+
   end
 
-  def create_wish
-    clean_params = params.require(:new_wish).permit( :title , :content)
-    @new_wish = NewWish.new(clean_params)
+  def create
+    @new_wish = NewWish.new(clean_wish_params)
 
 
     if @new_wish.save
-      redirect_to wish_list_path , notice: "成功～"
+      redirect_to wish_lists_path , notice: "成功～"
     else
-      render :new_wish
+      render :new
     end
   end
 
-  # def show_wish
-  #   render html: params
-  # end
+  def show
+    find()
+  end
 
-  def show_wish
-    
+  private
+  def clean_wish_params
+    params.require(:new_wish).permit( :title , :content)
   end 
+
+
 end

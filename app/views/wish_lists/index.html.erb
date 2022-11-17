@@ -1,8 +1,8 @@
 <h1>許願清單</h1>
 
-<%= link_to '新增許願卡', new_wish_path %>
+<%= link_to '新增許願卡', new_wish_list_path %>
 
-<% @new_wishes.each do| new_wish | %>
+<% @new_wishes.each do | new_wish| %>
   <li>
   <%= link_to new_wish.title , wish_list_path(new_wish)%>
   </li>
