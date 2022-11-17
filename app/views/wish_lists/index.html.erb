@@ -4,6 +4,8 @@
 
 <% @new_wishes.each do | new_wish| %>
   <li>
+  <%= link_to "編輯" , edit_wish_list_path(new_wish)%>
+  <%= link_to "刪除" , wish_list_path(new_wish) %>
   <%= link_to new_wish.title , wish_list_path(new_wish)%>
   </li>
 

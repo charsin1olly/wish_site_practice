@@ -1,0 +1,17 @@
+<h1>編輯許願卡</h1>
+
+
+
+<%= form_for @new_wish ,url:wish_list_path ,method:"patch" do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br />
+  </div>
+  <div>
+    <%= f.label :content %>
+    <%= f.text_area :content %><br />
+  </div>
+ 
+  <%= f.submit "許願吧～" %>
+
+<% end %>

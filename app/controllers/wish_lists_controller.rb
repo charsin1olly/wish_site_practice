@@ -14,14 +14,27 @@ class WishListsController < ApplicationController
 
 
     if @new_wish.save
-      redirect_to wish_lists_path , notice: "成功～"
+      redirect_to root_path , notice: "成功～"
     else
       render :new
     end
   end
 
   def show
-    @new_wish = NewWish.find(params[:id])
+    find_wish
+  end
+
+  def edit
+    find_wish
+  end
+
+  def update
+    find_wish
+    if @new_wish.update(clean_wish_params)
+      redirect_to root_path , notice: "成功～"
+    else
+      render :edit
+    end
   end
 
   private
@@ -29,5 +42,8 @@ class WishListsController < ApplicationController
     params.require(:new_wish).permit( :title , :content)
   end 
 
+  def find_wish
+    @new_wish = NewWish.find(params[:id])
+  end
 
 end
