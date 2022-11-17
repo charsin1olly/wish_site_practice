@@ -37,6 +37,12 @@ class WishListsController < ApplicationController
     end
   end
 
+  def destroy
+    find_wish
+    @new_wish.destroy
+    redirect_to root_path
+  end
+
   private
   def clean_wish_params
     params.require(:new_wish).permit( :title , :content)
