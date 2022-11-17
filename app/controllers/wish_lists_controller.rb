@@ -21,7 +21,7 @@ class WishListsController < ApplicationController
   end
 
   def show
-    find()
+    @new_wish = NewWish.find(params[:id])
   end
 
   private
