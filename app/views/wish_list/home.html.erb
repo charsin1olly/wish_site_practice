@@ -4,7 +4,7 @@
 
 <% @new_wishes.each do| new_wish | %>
   <li>
-  <%= link_to new_wish.title ,%>
+  <%= link_to new_wish.title , wish_list_path(new_wish)%>
   </li>
 
 

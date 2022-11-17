@@ -1,4 +1,4 @@
-class WishListController < ApplicationController
+class WishListsController < ApplicationController
 
   def home
     @new_wishes=NewWish.all
@@ -19,4 +19,12 @@ class WishListController < ApplicationController
       render :new_wish
     end
   end
+
+  # def show_wish
+  #   render html: params
+  # end
+
+  def show_wish
+    
+  end 
 end
