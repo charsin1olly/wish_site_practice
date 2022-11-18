@@ -5,8 +5,9 @@
 <% @wish_lists.each do |wish| %>
 
 <li>
+  <%= link_to "編輯" ,edit_wish_list_path(wish)  %>
+  <%= link_to "刪除" ,wish_list_path(wish) ,method:"delete" %>
   <%= link_to wish.title , wish_list_path(wish) %>
-
 </li>
 
 
