@@ -1,6 +1,7 @@
 class WishListsController < ApplicationController
  
   def index
+    @wish_lists=WishList.all
   end
 
   def new
@@ -14,6 +15,10 @@ class WishListsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @wish_list = WishList.find(params[:id])
   end
 
   private
