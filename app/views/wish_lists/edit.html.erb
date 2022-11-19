@@ -1,0 +1,17 @@
+<h1>編輯許願卡</h1>
+
+
+<%= form_with model: wish_list3 do |f| %>
+  <div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </div>
+
+  <div>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit "修改" %>
+
+<% end %>

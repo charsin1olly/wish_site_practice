@@ -1,0 +1,16 @@
+<h1>新增許願卡</h1>
+
+<%= form_for @wish_list , url: wish_lists_path ,method:"post" do |f| %>
+  <div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  </div>
+
+  <div>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+  </div>
+
+  <%= f.submit "新增" %>
+
+<% end %>
